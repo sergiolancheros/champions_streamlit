@@ -123,7 +123,7 @@ if selected == "Real Madrid":
                 df_selection,
                 x="Date",
                 y="Gls_Standard",
-                title="Goles a favor vs Goles en contra",
+                title="Goles a favor (for) vs Goles en contra (against)",
                 width=400,
                 height=400,
                 color="ForAgainst",
@@ -145,7 +145,7 @@ if selected == "Real Madrid":
                 df_selection,
                 values="Sh_Standard",
                 names="ForAgainst",
-                title="Remates - sin incluir penaltis",
+                title="Remates - sin incluir penaltis<br> a favor (for) y en contra (against)",
                 width=400,
                 height=400,
                 color="ForAgainst",
@@ -156,7 +156,7 @@ if selected == "Real Madrid":
             st.plotly_chart(shoots, use_container_width=True)
         
         with col10:
-            sot = px.bar(df_selection,x="Date", y="SoT_Standard", color="ForAgainst", hover_data=['Opponent'], title="Remates a puerta - sin incluir penaltis"
+            sot = px.bar(df_selection,x="Date", y="SoT_Standard", color="ForAgainst", hover_data=['Opponent'], title="Remates a puerta - sin incluir penaltis<br> a favor (for) y en contra (against)"
                                ,barmode="group", width=400, height=400,text_auto=True,color_discrete_map={"For":"#00529F","Against":"#EE324E"})
             
             sot.update_layout(
@@ -168,7 +168,7 @@ if selected == "Real Madrid":
             
         with col11:    
             goals_per_sot = px.bar(df_selection, x="Date", y="G_per_SoT_Standard", color="ForAgainst", hover_data=['Opponent']
-                                   , title="Goles por remate a porteria <br>- sin incluir penaltis", barmode="group", width=400, height=400,text_auto=True,
+                                   , title="Goles por remate a porteria <br>- sin incluir penaltis a favor (for) y en <br>contra (against)", barmode="group", width=400, height=400,text_auto=True,
                                    color_discrete_map={"For":"#00529F","Against":"#EE324E"})
             
             goals_per_sot.update_layout(
@@ -427,7 +427,7 @@ if selected == "Borussia Dortmund":
                 df_selection,
                 x="Date",
                 y="Gls_Standard",
-                title="Goles a favor (for) vs Goles en contra (against)",
+                title="Goles a favor (for) <br>vs Goles en contra (against)",
                 color="ForAgainst",
                 barmode="group",
                 text_auto=True,
@@ -473,7 +473,7 @@ if selected == "Borussia Dortmund":
             
         with col11:    
             goals_per_sot = px.bar(df_selection, x="Date", y="G_per_SoT_Standard", color="ForAgainst", hover_data=['Opponent']
-                                   , title="Goles por remate a porteria <br>- sin incluir penaltis a favor (for) y en contra (against)", barmode="group", width=400, height=400,text_auto=True,
+                                   , title="Goles por remate a porteria <br>- sin incluir penaltis a favor (for) y <br>en contra (against)", barmode="group", width=400, height=400,text_auto=True,
                                    color_discrete_map={"For":"#FDE100","Against":"#000000"})
             
             goals_per_sot.update_layout(
