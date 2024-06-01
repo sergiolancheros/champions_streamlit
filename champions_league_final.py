@@ -123,7 +123,7 @@ if selected == "Real Madrid":
                 df_selection,
                 x="Date",
                 y="Gls_Standard",
-                title="Goles a favor (for) vs Goles en contra (against)",
+                title="Goles a favor (for) vs <br>Goles en contra (against)",
                 width=400,
                 height=400,
                 color="ForAgainst",
