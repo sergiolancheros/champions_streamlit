@@ -217,7 +217,7 @@ if selected == "Real Madrid":
             pases_completos = px.sunburst(df_selection, path=['ForAgainst','Opponent'],values='Cmp_Total',
                   color="ForAgainst",
                   color_discrete_map={"For":"#00529F","Against":"#EE324E"},
-                  title="Pases completos a favor y en contra",
+                  title="Pases completos <br>a favor (for) y en contra (against)",
                   width=400,
                   height=400
                   )
@@ -228,7 +228,7 @@ if selected == "Real Madrid":
             pases_cortos_completos = px.sunburst(df_selection, path=['ForAgainst','Opponent'],values='Cmp_Short',
                   color="ForAgainst",
                   color_discrete_map={"For":"#00529F","Against":"#EE324E"},
-                  title="Pases cortos completos a favor y en contra",
+                  title="Pases cortos completos <br>a favor (for) y en contra (against)",
                   width=400,
                   height=400,
                   )
@@ -239,7 +239,7 @@ if selected == "Real Madrid":
             pases_medios_completos = px.sunburst(df_selection, path=['ForAgainst','Opponent'],values='Cmp_Medium',
                   color="ForAgainst",
                   color_discrete_map={"For":"#00529F","Against":"#EE324E"},
-                  title="Pases medios completos a favor y en contra",
+                  title="Pases medios completos <br>a favor (for) y en contra (against)",
                   height=400,
                   width=400,
                   )
@@ -250,7 +250,7 @@ if selected == "Real Madrid":
             pases_largos_completos = px.sunburst(df_selection, path=['ForAgainst','Opponent'],values='Cmp_Long',
                   color="ForAgainst",
                   color_discrete_map={"For":"#00529F","Against":"#EE324E"},
-                  title="Pases largos completos a favor y en contra",
+                  title="Pases largos completos <br>a favor (for) y en contra (against)",
                   width=400,
                   height=400,
                   )           
@@ -302,7 +302,7 @@ if selected == "Real Madrid":
                 width=450,
                 color_discrete_map={"For":"#00529F","Against":"#EE324E"},
                 text_auto=True,
-                title="Entradas en zona defensiva"
+                title="Entradas en zona defensiva <br>a favor (for) y en contra (against)"
             )
 
             fig.update_layout(
@@ -323,7 +323,7 @@ if selected == "Real Madrid":
                 width=450,
                 color_discrete_map={"For":"#00529F","Against":"#EE324E"},
                 text_auto=True,
-                title="Entradas en medio campo"
+                title="Entradas en medio campo <br>a favor (for) y en contra (against)"
             )
 
             fig.update_layout(
@@ -344,7 +344,7 @@ if selected == "Real Madrid":
                 width=450,
                 color_discrete_map={"For":"#00529F","Against":"#EE324E"},
                 text_auto=True,
-                title="Entradas en zona de ataque"
+                title="Entradas en zona de ataque <br>a favor (for) y en contra (against)"
             )
             
             fig.update_layout(
@@ -427,7 +427,7 @@ if selected == "Borussia Dortmund":
                 df_selection,
                 x="Date",
                 y="Gls_Standard",
-                title="Goles a favor vs Goles en contra",
+                title="Goles a favor (for) vs Goles en contra (against)",
                 color="ForAgainst",
                 barmode="group",
                 text_auto=True,
@@ -447,7 +447,7 @@ if selected == "Borussia Dortmund":
                 df_selection,
                 values="Sh_Standard",
                 names="ForAgainst",
-                title="Remates - sin incluir penaltis",
+                title="Remates - sin incluir penaltis <br>a favor (for) y en contra (against)",
                 color="ForAgainst",
                 color_discrete_map={"For":"#FDE100","Against":"#000000"},
                 hover_data=['Opponent'],
@@ -461,7 +461,7 @@ if selected == "Borussia Dortmund":
             st.plotly_chart(shoots,use_container_width=True)
         
         with col10:
-            sot = px.bar(df_selection,x="Date", y="SoT_Standard", color="ForAgainst", hover_data=['Opponent'], title="Remates a puerta - sin incluir penaltis"
+            sot = px.bar(df_selection,x="Date", y="SoT_Standard", color="ForAgainst", hover_data=['Opponent'], title="Remates a puerta - sin incluir penaltis <br>a favor (for) y en contra (against)"
                                ,barmode="group", width=400, height=400,text_auto=True,color_discrete_map={"For":"#FDE100","Against":"#000000"})
             
             sot.update_layout(
@@ -473,7 +473,7 @@ if selected == "Borussia Dortmund":
             
         with col11:    
             goals_per_sot = px.bar(df_selection, x="Date", y="G_per_SoT_Standard", color="ForAgainst", hover_data=['Opponent']
-                                   , title="Goles por remate a porteria <br>- sin incluir penaltis", barmode="group", width=400, height=400,text_auto=True,
+                                   , title="Goles por remate a porteria <br>- sin incluir penaltis a favor (for) y en contra (against)", barmode="group", width=400, height=400,text_auto=True,
                                    color_discrete_map={"For":"#FDE100","Against":"#000000"})
             
             goals_per_sot.update_layout(
@@ -522,7 +522,7 @@ if selected == "Borussia Dortmund":
             pases_completos = px.sunburst(df_selection, path=['ForAgainst','Opponent'],values='Cmp_Total',
                   color="ForAgainst",
                   color_discrete_map={"For":"#FDE100","Against":"#000000"},
-                  title="Pases completos a favor y en contra",
+                  title="Pases completos <br>a favor (for) y en contra (against)",
                   width=400,
                   height=400
                   )
@@ -533,7 +533,7 @@ if selected == "Borussia Dortmund":
             pases_cortos_completos = px.sunburst(df_selection, path=['ForAgainst','Opponent'],values='Cmp_Short',
                   color="ForAgainst",
                   color_discrete_map={"For":"#FDE100","Against":"#000000"},
-                  title="Pases cortos completos a favor y en contra",
+                  title="Pases cortos completos <br>a favor (for) y en contra (against)",
                   width=400,
                   height=400,
                   )
@@ -544,7 +544,7 @@ if selected == "Borussia Dortmund":
             pases_medios_completos = px.sunburst(df_selection, path=['ForAgainst','Opponent'],values='Cmp_Medium',
                   color="ForAgainst",
                   color_discrete_map={"For":"#FDE100","Against":"#000000"},
-                  title="Pases medios completos a favor y en contra",
+                  title="Pases medios completos <br>a favor (for) y en contra (against)",
                   height=400,
                   width=400,
                   )
@@ -555,7 +555,7 @@ if selected == "Borussia Dortmund":
             pases_largos_completos = px.sunburst(df_selection, path=['ForAgainst','Opponent'],values='Cmp_Long',
                   color="ForAgainst",
                   color_discrete_map={"For":"#FDE100","Against":"#000000"},
-                  title="Pases largos completos a favor y en contra",
+                  title="Pases largos completos <br>a favor (for) y en contra (against)",
                   width=400,
                   height=400,
                   )
@@ -608,7 +608,7 @@ if selected == "Borussia Dortmund":
                 width=450,
                 color_discrete_map={"For":"#FDE100","Against":"#000000"},
                 text_auto=True,
-                title="Entradas en zona defensiva"
+                title="Entradas en zona defensiva <br>a favor (for) y en contra (against)"
             )
             
             fig.update_layout(
@@ -629,7 +629,7 @@ if selected == "Borussia Dortmund":
                 width=450,
                 color_discrete_map={"For":"#FDE100","Against":"#000000"},
                 text_auto=True,
-                title="Entradas en medio campo"
+                title="Entradas en medio campo <br>a favor (for) y en contra (against)"
             )
             
             fig.update_layout(
@@ -650,7 +650,7 @@ if selected == "Borussia Dortmund":
                 width=450,
                 color_discrete_map={"For":"#FDE100","Against":"#000000"},
                 text_auto=True,
-                title="Entradas en zona de ataque"
+                title="Entradas en zona de ataque <br>a favor (for) y en contra (against)"
             )
             
             fig.update_layout(
