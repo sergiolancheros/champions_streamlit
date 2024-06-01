@@ -2,15 +2,23 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
 import plotly.express as px
+import os
 
 ############# Data ##############################
 
-df = pd.read_excel(r"C:\Users\Sergio\Desktop\Proyectos\champions_data.xlsx",sheet_name='Sheet7')
-df1 = pd.read_excel(r"C:\Users\Sergio\Desktop\Proyectos\champions_stat_logs.xlsx",sheet_name='Sheet1')
-df2 = pd.read_excel(r"C:\Users\Sergio\Desktop\Proyectos\champions_stat_logs.xlsx",sheet_name='Sheet2')
-df3 = pd.read_excel(r"C:\Users\Sergio\Desktop\Proyectos\champions_stat_logs.xlsx",sheet_name='Sheet3')
+base_path = os.path.dirname(__file__)
+relative_path = 'champions_data.xlsx'
+full_path = os.path.join(base_path,relative_path)
 
-df4 = pd.read_excel(r"C:\Users\Sergio\Desktop\Proyectos\champions_data.xlsx", sheet_name='Sheet15')
+relative_path_1 = 'champions_stat_logs.xlsx'
+full_path_1 = os.path.join(base_path,relative_path_1)
+
+df = pd.read_excel(full_path,sheet_name='Sheet7')
+df1 = pd.read_excel(full_path_1,sheet_name='Sheet1')
+df2 = pd.read_excel(full_path_1,sheet_name='Sheet2')
+df3 = pd.read_excel(full_path_1,sheet_name='Sheet3')
+
+df4 = pd.read_excel(full_path, sheet_name='Sheet15')
 
 madrid_competition = df[(df['Comp'] == 'Champions Lg') & (df['Round'] != 'Final')]
 madrid_shooting = df1[(df1['Comp'] == 'Champions Lg') & (df1['Round'] != 'Final') & (df1['Team'] == "Real Madrid")]
